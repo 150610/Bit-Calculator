@@ -17,17 +17,22 @@ def int_check(question,low):
         except ValueError:
             print(error)
 
-# Main Routine goes here
-for item in range(0, 2):
-    integer = int_check("Integer:",0)
-    print(integer)
 
-print()
+# Calculates how many bits are needed to represent an integer
+def image_calc():
+    #Get the image dimensions
+    width = int_check("Width: ", 0)
+    height = int_check("Height: ", 0)
 
-for item in range(0, 2):
-        height = int_check("Width:", 0)
-        print(height)
+    num_pixels = width * height
+    num_bits = num_pixels*24
 
-for item in range(0, 2):
-        height = int_check("Height:", 0)
-        print(height)
+    # Set up answer and return it
+    answer = (f"Number of pixels: {width} x {height} = {num_pixels}"
+              f" \nNumber of bits :{num_pixels} x 24 = {num_bits}")
+
+    return answer
+
+#Main routine goes here
+image_ans = image_calc()
+print(image_ans)

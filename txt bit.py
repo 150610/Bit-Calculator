@@ -16,3 +16,5 @@ def calc_text_bits():
 # Main routine goes here
 text_ans = calc_text_bits()
 print(text_ans)
+
+
